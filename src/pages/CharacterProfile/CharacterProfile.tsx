@@ -9,19 +9,19 @@ import { Spinner } from "reactstrap";
 export const CharacterProfile: React.FC = () => {
   const { id }: { id: string } = useParams();
   const dispatch = useDispatch();
-  const { character } = useSelector(({ characters }: AppState) => characters);
+  const { character, isLoaded, isFailure, isLoading, message } = useSelector(({ characters }: AppState) => characters);
 
 
   useEffect(() => {
     dispatch(getCharacter(id))
-
     return () => void dispatch(clearProfile())
-  }, [])
+  }, [dispatch, id])
 
   return (
       <MainLayout>
-        <Spinner className="loading-spinner"/>
-        <CharacterCard character={character} isProfilePage={true}/>
+        { isLoading && (<Spinner className="loading-spinner"/>) }
+        { isLoaded && (<CharacterCard character={character} isProfilePage={true}/>)}
+        { isFailure && (<h6 className="text-danger">{ message }</h6>)}
       </MainLayout>
   )
 }

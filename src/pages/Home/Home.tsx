@@ -19,13 +19,6 @@ export const Home: React.FC = () => {
 
   return (
       <MainLayout>
-        { isLoaded && (
-            <Row>
-              <Col>
-                <Paginator/>
-              </Col>
-            </Row>
-        )}
         <Row>
           {
             isLoaded && characters.slice(0, 12).map((character: Character, index: number) => (
