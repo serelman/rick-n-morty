@@ -1,0 +1,57 @@
+.character-card {
+  max-width: 510px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 100%;
+}
+
+.character-card__img img {
+  width: 100%;
+}
+
+.character-card__wrapper {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background: $text-muted;
+  min-height: 120px;
+}
+
+.character-card__info.episodes--list span {
+  font-size: .75rem;
+}
+.character-card__info.status--alive span {
+  color: $success;
+}
+.character-card__info.status--dead span {
+  color: $danger;
+}
+
+.character-card__title {
+  font-size: 1.25rem;
+}
+
+.character-card__info {
+  color: $dark;
+}
+
+.character-card__info span, .character-card__title span {
+  color: $light;
+}
+
+.character-card__remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $danger;
+  &:hover {
+    color: $light;
+  }
+}
+
+.dark-theme .character-card__wrapper {
+  background: #22242a !important;
+}
+.character-card__info {
+  color: $light;
+}

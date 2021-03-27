@@ -1,0 +1,26 @@
+.c-header {
+  background-color: $secondary;
+}
+
+.c-header .navbar-brand, .c-header .nav-link {
+  color: white !important;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.dark-theme .c-header {
+  background-color: $light !important;
+}
+
+.dark-theme {
+  .c-header {
+    background-color: #22242a !important;
+  }
+  .c-header .navbar-brand, .c-header .nav-link {
+    color: $light !important;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

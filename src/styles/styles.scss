@@ -1,0 +1,46 @@
+@import "~bootstrap/scss/bootstrap";
+@import "component.character-card";
+@import "component.header";
+@import "component.switch";
+
+
+html, body, #root, .App {
+  height: 100vh;
+}
+
+.main-layout {
+  background-color: $light;;
+}
+
+.dark-theme .main-layout {
+  background-color: $dark;
+}
+
+.loading-spinner {
+  position: absolute;
+  left: 50%;
+  top: 33%;
+}
+.dark-theme .loading-spinner {
+  color: $white;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: $secondary;
+}
+
+.dark-theme {
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: $dark;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
+}
+
+
